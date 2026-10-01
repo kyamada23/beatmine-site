@@ -1,0 +1,57 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BeatMine for Redmine サポート</title>
+<meta name="description" content="自分が担当するRedmineのタスクを、iPhoneから短い操作で完了・コメントできるアプリ「BeatMine for Redmine」の使い方と、つまずいたときの対処。">
+<link rel="canonical" href="https://kyamada23.github.io/beatmine-site/">
+<meta property="og:type" content="website"><meta property="og:title" content="BeatMine for Redmine"><meta property="og:description" content="自分が担当するRedmineのタスクを、iPhoneから短い操作で報告するアプリ。"><meta property="og:url" content="https://kyamada23.github.io/beatmine-site/"><meta property="og:image" content="https://kyamada23.github.io/beatmine-site/assets/ogp.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="style.css"></head><body><main>
+<header><img src="icon.png" alt="" width="48" height="48"><div><h1>BeatMine for Redmine</h1><div class="sub">サポート</div></div></header>
+<nav><a href="./" aria-current="page">サポート</a><a href="privacy.html">プライバシーポリシー</a></nav>
+<p>自分が担当するRedmineのタスクを、iPhoneから短い操作で報告するアプリです。本アプリはRedmineの公式アプリではなく、Redmineの開発者とは関係ありません。</p>
+<ul class="points"><li>自分が担当する、まだ終わっていないタスクだけが並ぶ。期限を過ぎたものは赤で出る。</li><li>行を右へスワイプすると完了。すぐ取り消せる。</li><li>行をタップすると、コメントも送れる。内容はRedmineの履歴に残る。</li></ul>
+<div class="shots"><figure><img src="assets/screen-01.webp" width="600" height="1222" alt="今日のタスクの一覧。期限を過ぎたタスクは赤で出る"><figcaption>今日のタスク</figcaption></figure><figure><img src="assets/screen-02.webp" width="600" height="1222" alt="タスクをタップして出る画面。「完了」と「コメント」のボタンがある"><figcaption>タップで完了・コメント</figcaption></figure></div>
+<nav class="toc" aria-label="このページの内容"><a href="#need">必要なもの</a><a href="#start">使い始める</a><a href="#trouble">つまずいたとき</a><a href="#faq">よくあること</a><a href="#unsupported">対応していないもの</a><a href="#contact">お問い合わせ</a></nav>
+<h2 id="need">使い始めるために必要なもの</h2>
+<ul><li>Redmine 6.0・6.1・7.0のどれか。</li><li>そのRedmineを、この端末からHTTPSで開けること。</li><li>RedmineでREST APIが有効になっていること（Redmineの管理者の設定）。</li><li>自分のAPIキー。手元になければ、接続の画面の「APIキーをRedmineで取得」から取れる。</li></ul>
+<p>使えない環境は「<a href="#unsupported">対応していないもの</a>」にまとめています。</p>
+<h2 id="start">使い始める</h2>
+<ol><li>アプリを開き、RedmineのURLを入れる。</li><li>「APIキーをRedmineで取得」を押す。ブラウザでRedmineが開くので、ログインして、表示されたAPIキーをコピーする。BeatMineに戻り、「貼り付けて接続」を押す。APIキーが手元にあれば、入力欄に入れて「接続」を押してもよい。</li><li>自分のタスクの一覧が出る。</li></ol>
+<h2 id="trouble">つまずいたとき</h2>
+<p>画面に出た文を探してください。</p>
+<h3>接続するとき</h3>
+<p>「Redmineに接続できません。」と出たら、原因を確かめます。URLとAPIキーの誤りは、その入力欄の下に出ます。それ以外は、「詳細」を押すと出ます。</p>
+<div class="table"><table><tr><th>原因の文</th><th>できること</th></tr>
+<tr><td>「RedmineのURLが正しくありません。」</td><td>端末のブラウザで、そのURLを開いてみる。開けないときは、URLの打ち間違いや、社内だけのRedmineに社外からつないでいることが考えられる。</td></tr>
+<tr><td>「APIキーが正しくありません。」</td><td>APIキーを入れ直す。「APIキーをRedmineで取得」から、表示されたAPIキーをコピーして貼り付ける。Redmineの前に別のログイン（Basic認証など）がある環境では、このアプリは使えない。</td></tr>
+<tr><td>「RedmineのAPIが無効です。」</td><td>RedmineでREST APIを有効にしてもらう。</td></tr>
+<tr><td>「Redmineの証明書を確認できません。」</td><td>そのRedmineの証明書を、この端末で確かめられない。自社だけで使う証明書のRedmineには対応していない。Wi-Fiのログインが終わっていないときや、端末の日時がずれているときにも出る。</td></tr>
+</table></div>
+<h3>読み込み・完了・コメントのとき</h3>
+<div class="table"><table><tr><th>画面に出る文</th><th>できること</th></tr>
+<tr><td>「ネットワークエラー」</td><td>電波の届く場所で、もう一度送る。Redmine側が一時的に応答しないときにも出る。</td></tr>
+<tr><td>「他のユーザーによって更新されています。再読み込みしてください。」</td><td>ほかの人がそのタスクを変えた。再読み込みして、今の状態を見てから操作する。</td></tr>
+<tr><td>「完了する権限がありません。」（コメント・読み込みも同じ形）</td><td>そのRedmineで許可されていない。Redmineの管理者に相談する。</td></tr>
+<tr><td>「未完了の子タスクがあるため、完了できません。」</td><td>子タスクを先にすべて完了する。</td></tr>
+<tr><td>「未完了のタスクにブロックされているため、完了できません。」</td><td>ブロック元のタスク（Redmineの「関連するチケット」）を先に完了する。</td></tr>
+<tr><td>「変更できませんでした。」</td><td>Redmineが変更を受け付けなかった。完了するときに入力が必要な項目があると起きる。その場合は、Redmineの画面から完了する。</td></tr>
+<tr><td>「送信完了を確認できませんでした。再読み込みしてください。」</td><td>送った結果が分からない状態。再読み込みすると、届いていたかを確かめる。<ul><li>Redmineを読めたのに反映を確認できなかったときは、その送信をやめて次の報告を続けられる。コメントは、送り直すと二重になることがある。</li><li>圏外などでRedmineを読めない間は、確かめられるまで次の完了・コメントはできない。</li></ul></td></tr>
+<tr><td>「アプリのエラーです。再読み込みしてください。」</td><td>再読み込みしても直らないときは、対応していないRedmine（6.0より前など）の可能性がある。</td></tr>
+</table></div>
+<h2 id="faq">そのほか、よくあること</h2>
+<dl>
+<dt>完了したら、意図しない状態（「却下」など）になった</dt><dd>そのタスクで変更できる終了扱いの状態のうち、Redmineの状態の並び順で最初のものを使います。どの状態にしたかは、完了の通知に出ます。完了した行の「取り消す」（または完了の通知の「取り消す」）で元に戻せます。ただし、一覧を再読み込みした後や、Redmineで元の状態へ戻す変更が許されていないときは取り消せません。そのときは、Redmineの画面から戻してください。Redmineの管理者が状態の並び順を変える（「完了」を「却下」より上にする）と、選ばれる状態が変わります。</dd>
+<dt>APIキーを取るときにパスワードを聞かれた（Redmine 7.0）</dt><dd>ログインしてから時間がたつと、Redmineがパスワードの再入力を求めます。入力すればAPIキーが表示されます。</dd>
+<dt>一覧に出ないタスクがある</dt><dd>自分が担当で、まだ完了しておらず、開始日が未来でないタスクだけを出しています。終了したプロジェクトのタスクも出しません。期限では絞っていません。</dd>
+<dt>端末を手放すとき</dt><dd>設定の「接続を削除」で、APIキー・コメントの下書き・未確認の送信の記録が端末から消えます。</dd>
+</dl>
+<h2 id="unsupported">対応していないもの</h2>
+<p>次の環境は、動くことはあっても確かめていません。</p>
+<ul><li>Redmine 6.0より前</li><li>プラグインを入れたRedmine</li><li>クラウド版（My Redmine・Planioなど）</li><li>自社だけで使う証明書</li><li>Redmineの前に置いた認証（Basic認証など）</li><li>SSO</li></ul>
+<h2 id="contact">お問い合わせ</h2>
+<p>不具合の報告やご意見は、メールでお寄せください。</p>
+<p><a class="button" href="mailto:potei_eisu2@yahoo.co.jp?subject=BeatMine%20for%20Redmine">potei_eisu2@yahoo.co.jp</a></p>
+<p>GitHubのアカウントをお持ちなら、<a href="https://github.com/kyamada23/beatmine-site/issues/new">GitHubのIssue</a>からも送れます。Issueは誰でも読めます。</p>
+<p>APIキー・パスワード・RedmineのURL・タスクの内容など、他人に知られたくない情報は書かないでください。次の情報を添えていただくと、早くお答えできます。</p>
+<ul><li>アプリのバージョン（iPhoneの「設定」→「一般」→「iPhoneストレージ」→「BeatMine」で確認できます。分からなければ省いてかまいません）</li><li>iPhoneの機種とiOSのバージョン</li><li>Redmineのバージョン（分かれば）</li><li>画面に出た文（「ネットワークエラー」など）と、そのときにした操作</li></ul>
+<p class="sub">2026年10月2日 更新</p>
+</main></body></html>
