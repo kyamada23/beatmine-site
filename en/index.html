@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BeatMine for Redmine Support</title>
+<meta name="description" content="How to use BeatMine for Redmine, an iPhone app for completing and commenting on your assigned Redmine tasks in a few taps, and what to do if something goes wrong.">
+<link rel="canonical" href="https://kyamada23.github.io/beatmine-site/en/">
+<link rel="alternate" hreflang="ja" href="https://kyamada23.github.io/beatmine-site/"><link rel="alternate" hreflang="en" href="https://kyamada23.github.io/beatmine-site/en/"><link rel="alternate" hreflang="fr" href="https://kyamada23.github.io/beatmine-site/fr/"><link rel="alternate" hreflang="de" href="https://kyamada23.github.io/beatmine-site/de/"><link rel="alternate" hreflang="ko" href="https://kyamada23.github.io/beatmine-site/ko/"><link rel="alternate" hreflang="zh-Hant" href="https://kyamada23.github.io/beatmine-site/zh-hant/"><link rel="alternate" hreflang="x-default" href="https://kyamada23.github.io/beatmine-site/en/">
+<meta property="og:type" content="website"><meta property="og:title" content="BeatMine for Redmine"><meta property="og:description" content="An iPhone app for reporting on your assigned Redmine tasks in a few taps."><meta property="og:url" content="https://kyamada23.github.io/beatmine-site/en/"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://kyamada23.github.io/beatmine-site/assets/ogp.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css"></head><body><main>
+<header><img src="../icon.png" alt="" width="48" height="48"><div><h1>BeatMine for Redmine</h1><div class="sub">Support</div></div></header>
+<nav><a href="./" aria-current="page">Support</a><a href="privacy.html">Privacy policy</a></nav>
+<nav class="langs" aria-label="Language"><a href="../" hreflang="ja" lang="ja">日本語</a><span aria-current="true" lang="en">English</span><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../de/" hreflang="de" lang="de">Deutsch</a><a href="../ko/" hreflang="ko" lang="ko">한국어</a><a href="../zh-hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+<p>An app for reporting on the Redmine tasks assigned to you from your iPhone, in just a few taps. BeatMine is not an official Redmine app and is not affiliated with the Redmine developers.</p>
+<ul class="points"><li>Only your own unfinished tasks are listed. Overdue tasks are shown in red.</li><li>Swipe a task right to complete it. You can undo it right away.</li><li>Tap a task to send a comment. It is saved in the Redmine history.</li></ul>
+<div class="shots"><figure><img src="../assets/screen-01-en.webp" width="600" height="1222" alt="The list of today&#x27;s tasks. Overdue tasks are shown in red."><figcaption>Today's tasks</figcaption></figure><figure><img src="../assets/screen-02-en.webp" width="600" height="1222" alt="The screen that opens when you tap a task, with “Complete” and “Comment” buttons."><figcaption>Tap to complete or comment</figcaption></figure></div>
+<nav class="toc" aria-label="On this page"><a href="#need">What you need</a><a href="#start">Getting started</a><a href="#trouble">If something goes wrong</a><a href="#faq">Other common questions</a><a href="#unsupported">Not supported</a><a href="#contact">Contact</a></nav>
+<h2 id="need">What you need</h2>
+<ul><li>Redmine 6.0, 6.1 or 7.0.</li><li>You can open that Redmine over HTTPS from this device.</li><li>The REST API is enabled in Redmine (a setting for your Redmine administrator).</li><li>Your API key. If you don't have it at hand, use “Get the API key in Redmine” on the connection screen.</li></ul>
+<p>Environments that don't work are listed under “Not supported”.</p>
+<h2 id="start">Getting started</h2>
+<ol><li>Open the app and enter your Redmine URL.</li><li>Tap “Get the API key in Redmine”. Redmine opens in your browser. Sign in and copy the API key shown. Return to BeatMine and tap “Paste and connect”. If you already have your API key, you can enter it and tap “Connect”.</li><li>Your task list appears.</li></ol>
+<h2 id="trouble">If something goes wrong</h2>
+<p>Look for the message shown on the screen.</p>
+<h3>When connecting</h3>
+<p>If you see “Can't connect to Redmine.”, check the cause. A wrong URL or API key is shown under that field. Other causes are shown when you tap “Details”.</p>
+<div class="table"><table><tr><th>Cause</th><th>What you can do</th></tr>
+<tr><td>“The Redmine URL is incorrect.”</td><td>Open the URL in your device's browser. If it doesn't open, the URL may be mistyped, or you may be trying to reach an internal-only Redmine from outside your organization.</td></tr>
+<tr><td>“The API key is incorrect.”</td><td>Enter the API key again. Tap “Get the API key in Redmine”, then copy and paste the API key shown. This app can't be used if there is another sign-in (such as Basic authentication) in front of Redmine.</td></tr>
+<tr><td>“The Redmine API is disabled. Ask your Redmine administrator to enable it.”</td><td>Ask for the REST API to be enabled in Redmine.</td></tr>
+<tr><td>“Can't verify Redmine's certificate.”</td><td>This device can't verify the certificate of your Redmine. Redmine servers that use a private certificate (one issued only within your organization) are not supported. This message also appears if you haven't finished signing in to a Wi-Fi network, or if the device's date and time are wrong.</td></tr>
+</table></div>
+<h3>When loading, completing or commenting</h3>
+<div class="table"><table><tr><th>Message</th><th>What you can do</th></tr>
+<tr><td>“Network error”</td><td>Try again where you have a signal. This also appears when Redmine is temporarily not responding.</td></tr>
+<tr><td>“Updated by another user. Please reload.”</td><td>Someone else changed the task. Reload, check its current state, and then try again.</td></tr>
+<tr><td>“You don't have permission to complete this.” (a similar message appears for commenting and loading)</td><td>This is not allowed in your Redmine. Ask your Redmine administrator.</td></tr>
+<tr><td>“Can't complete because it has unfinished subtasks.”</td><td>Complete all subtasks first.</td></tr>
+<tr><td>“Can't complete because it's blocked by an unfinished task.”</td><td>Complete the blocking task first (shown under “Related issues” in Redmine).</td></tr>
+<tr><td>“The change couldn't be made.”</td><td>Redmine did not accept the change. This happens when a field must be filled in to complete the task. In that case, complete it in Redmine.</td></tr>
+<tr><td>“Couldn't confirm that it was sent. Please reload.”</td><td>The app couldn't confirm whether your update reached Redmine. Reloading checks again.<ul><li>If Redmine can be reached but the app still can't confirm the update, it stops checking so you can carry on with your next report.</li><li>While Redmine can't be reached (for example, with no signal), you can't complete or comment on other tasks until the update is confirmed. However, if two reloads in a row can't confirm it, the app stops checking (the count continues even if you reopen the app).</li><li>A comment the app stopped checking stays as a draft. It may actually have arrived, so sending it again may post it twice.</li></ul></td></tr>
+<tr><td>“Something went wrong in the app. Please reload.”</td><td>If reloading doesn't fix it, your Redmine may not be supported (for example, older than 6.0).</td></tr>
+</table></div>
+<h2 id="faq">Other common questions</h2>
+<dl>
+<dt>A completed task got an unexpected status (such as “Rejected”)</dt><dd>The app uses the first closed status you're allowed to set for that task, in Redmine's status order. The status used is shown in the completion notice. Tap “Undo” on the completed task (or in the notice) to revert it. You can't undo after reloading the list, or if Redmine doesn't allow changing the status back. In that case, change it back in Redmine. If your Redmine administrator changes the status order (putting “Closed” above “Rejected”), a different status is chosen.</dd>
+<dt>I was asked for my password when getting the API key (Redmine 7.0)</dt><dd>Redmine asks for your password again some time after you sign in. Enter it to see your API key.</dd>
+<dt>Some tasks are missing from the list</dt><dd>The list shows only tasks assigned to you that are not closed and whose start date is not in the future. Tasks in closed projects are not shown. The list is not filtered by due date.</dd>
+<dt>Before passing on or disposing of your device</dt><dd>“Delete connection” in “Settings” removes your API key, comment drafts and records of unconfirmed updates from the device.</dd>
+</dl>
+<h2 id="unsupported">Not supported</h2>
+<p>The following may work, but have not been tested.</p>
+<ul><li>Redmine older than 6.0</li><li>Redmine with plugins</li><li>Hosted Redmine services (My Redmine, Planio and others)</li><li>Private certificates issued only within your organization</li><li>Authentication in front of Redmine (such as Basic authentication)</li><li>SSO</li></ul>
+<h2 id="contact">Contact</h2>
+<p>Please send bug reports and feedback by email.</p>
+<p><a class="button" href="mailto:potei_eisu2@yahoo.co.jp?subject=BeatMine%20for%20Redmine">potei_eisu2@yahoo.co.jp</a></p>
+<p>If you have a GitHub account, you can also use <a href="https://github.com/kyamada23/beatmine-site/issues/new">GitHub Issues</a>. Issues are public.</p>
+<p>Please don't include your API key, passwords, Redmine URL, task details or anything else you want to keep private. Including the following information helps us respond faster.</p>
+<ul><li>The app version (Settings &gt; General &gt; iPhone Storage &gt; BeatMine. Leave it out if you can't find it.)</li><li>Your iPhone model and iOS version</li><li>Your Redmine version (if you know it)</li><li>The message shown on the screen (such as “Network error”) and what you were doing</li></ul>
+<p class="sub">Updated October 3, 2026</p>
+</main></body></html>

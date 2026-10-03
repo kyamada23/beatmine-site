@@ -20,3 +20,7 @@ dt{font-weight:600;margin-top:12px}dd{margin:0 0 0 0;color:var(--ink)}
 nav a[aria-current]{font-weight:600}
 .button{display:inline-block;padding:10px 20px;border:1px solid var(--accent);border-radius:8px;text-decoration:none;font-weight:600}
 @media (max-width:560px){.table table,.table tr,.table td{display:block}.table tr:first-child{display:none}.table tr{border:1px solid var(--line);border-radius:8px;margin:8px 0;overflow:hidden}.table td{border:0}.table td:first-child{background:var(--tint);font-weight:600}}
+.langs{margin:4px 0 0;font-size:14px;color:var(--sub)}.langs a,.langs span{margin-right:14px;white-space:nowrap}.langs span{font-weight:600;color:var(--ink)}
+html:lang(ko) body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+html:lang(zh-Hant) body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif}
+td,dd,li,p{overflow-wrap:break-word}

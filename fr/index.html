@@ -1,0 +1,59 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BeatMine for Redmine Assistance</title>
+<meta name="description" content="Mode d&#x27;emploi de BeatMine for Redmine, l&#x27;application iPhone pour terminer et commenter en quelques gestes vos tâches Redmine, et solutions en cas de problème.">
+<link rel="canonical" href="https://kyamada23.github.io/beatmine-site/fr/">
+<link rel="alternate" hreflang="ja" href="https://kyamada23.github.io/beatmine-site/"><link rel="alternate" hreflang="en" href="https://kyamada23.github.io/beatmine-site/en/"><link rel="alternate" hreflang="fr" href="https://kyamada23.github.io/beatmine-site/fr/"><link rel="alternate" hreflang="de" href="https://kyamada23.github.io/beatmine-site/de/"><link rel="alternate" hreflang="ko" href="https://kyamada23.github.io/beatmine-site/ko/"><link rel="alternate" hreflang="zh-Hant" href="https://kyamada23.github.io/beatmine-site/zh-hant/"><link rel="alternate" hreflang="x-default" href="https://kyamada23.github.io/beatmine-site/en/">
+<meta property="og:type" content="website"><meta property="og:title" content="BeatMine for Redmine"><meta property="og:description" content="Une application iPhone pour rendre compte en quelques gestes de vos tâches Redmine."><meta property="og:url" content="https://kyamada23.github.io/beatmine-site/fr/"><meta property="og:locale" content="fr_FR"><meta property="og:image" content="https://kyamada23.github.io/beatmine-site/assets/ogp.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css"></head><body><main>
+<header><img src="../icon.png" alt="" width="48" height="48"><div><h1>BeatMine for Redmine</h1><div class="sub">Assistance</div></div></header>
+<nav><a href="./" aria-current="page">Assistance</a><a href="privacy.html">Politique de confidentialité</a></nav>
+<nav class="langs" aria-label="Language"><a href="../" hreflang="ja" lang="ja">日本語</a><a href="../en/" hreflang="en" lang="en">English</a><span aria-current="true" lang="fr">Français</span><a href="../de/" hreflang="de" lang="de">Deutsch</a><a href="../ko/" hreflang="ko" lang="ko">한국어</a><a href="../zh-hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+<p>Une application pour rendre compte, depuis votre iPhone et en quelques gestes, des tâches Redmine qui vous sont assignées. BeatMine n'est pas une application officielle de Redmine et n'a aucun lien avec les développeurs de Redmine.</p>
+<ul class="points"><li>Seules vos tâches non terminées sont listées. Les tâches en retard apparaissent en rouge.</li><li>Balayez une tâche vers la droite pour la terminer. Vous pouvez annuler aussitôt.</li><li>Touchez une tâche pour envoyer un commentaire. Il est conservé dans l'historique de Redmine.</li></ul>
+<div class="shots"><figure><img src="../assets/screen-01-fr.webp" width="600" height="1222" alt="La liste des tâches du jour. Les tâches en retard s&#x27;affichent en rouge."><figcaption>Tâches du jour</figcaption></figure><figure><img src="../assets/screen-02-fr.webp" width="600" height="1222" alt="L&#x27;écran qui s&#x27;ouvre quand on touche une tâche, avec les boutons « Terminer » et « Commentaire »."><figcaption>Touchez pour terminer ou commenter</figcaption></figure></div>
+<nav class="toc" aria-label="Sur cette page"><a href="#need">Ce qu'il vous faut</a><a href="#start">Pour commencer</a><a href="#trouble">En cas de problème</a><a href="#faq">Autres questions fréquentes</a><a href="#unsupported">Non pris en charge</a><a href="#contact">Contact</a></nav>
+<h2 id="need">Ce qu'il vous faut</h2>
+<ul><li>Redmine 6.0, 6.1 ou 7.0.</li><li>Un accès HTTPS à ce Redmine depuis cet appareil.</li><li>L'API REST activée dans Redmine (un réglage de l'administrateur de Redmine).</li><li>Votre clé d'API. Si vous ne l'avez pas sous la main, utilisez « Obtenir la clé d'API dans Redmine » sur l'écran de connexion.</li></ul>
+<p>Les environnements non pris en charge sont listés dans « Non pris en charge ».</p>
+<h2 id="start">Pour commencer</h2>
+<ol><li>Ouvrez l'application et saisissez l'URL de votre Redmine.</li><li>Touchez « Obtenir la clé d'API dans Redmine ». Redmine s'ouvre dans le navigateur. Connectez-vous et copiez la clé d'API affichée. Revenez dans BeatMine et touchez « Coller et se connecter ». Si vous avez déjà votre clé d'API, vous pouvez la saisir et toucher « Se connecter ».</li><li>La liste de vos tâches s'affiche.</li></ol>
+<h2 id="trouble">En cas de problème</h2>
+<p>Cherchez le message affiché à l'écran.</p>
+<h3>À la connexion</h3>
+<p>Si « Impossible de se connecter à Redmine. » s'affiche, vérifiez la cause. Une erreur d'URL ou de clé d'API s'affiche sous le champ concerné. Les autres causes s'affichent en touchant « Détails ».</p>
+<div class="table"><table><tr><th>Cause</th><th>Que faire</th></tr>
+<tr><td>« L'URL de Redmine est incorrecte. »</td><td>Ouvrez cette URL dans le navigateur de l'appareil. Si elle ne s'ouvre pas, l'URL contient peut-être une faute de frappe, ou vous essayez d'accéder depuis l'extérieur à un Redmine réservé au réseau interne.</td></tr>
+<tr><td>« La clé d'API est incorrecte. »</td><td>Saisissez à nouveau la clé d'API. Touchez « Obtenir la clé d'API dans Redmine », puis copiez et collez la clé affichée. L'application ne peut pas être utilisée si une autre authentification (Basic, par exemple) précède Redmine.</td></tr>
+<tr><td>« L'API de Redmine est désactivée. Demandez à l'administrateur de Redmine de l'activer. »</td><td>Faites activer l'API REST dans Redmine.</td></tr>
+<tr><td>« Impossible de vérifier le certificat de Redmine. »</td><td>Cet appareil ne peut pas vérifier le certificat de votre Redmine. Les serveurs Redmine utilisant un certificat privé (émis uniquement au sein de votre organisation) ne sont pas pris en charge. Ce message apparaît aussi si l'identification sur le réseau Wi-Fi n'est pas terminée, ou si la date et l'heure de l'appareil sont incorrectes.</td></tr>
+</table></div>
+<h3>Lors du chargement des tâches, de leur clôture ou de l'envoi d'un commentaire</h3>
+<div class="table"><table><tr><th>Message</th><th>Que faire</th></tr>
+<tr><td>« Erreur réseau »</td><td>Réessayez à un endroit où vous avez du réseau. Ce message apparaît aussi quand Redmine ne répond pas temporairement.</td></tr>
+<tr><td>« Mis à jour par un autre utilisateur. Veuillez recharger. »</td><td>Quelqu'un d'autre a modifié la tâche. Rechargez, vérifiez son état actuel, puis réessayez.</td></tr>
+<tr><td>« Vous n'avez pas l'autorisation de terminer. » (message similaire pour les commentaires et le chargement)</td><td>Ce n'est pas autorisé dans votre Redmine. Adressez-vous à l'administrateur de Redmine.</td></tr>
+<tr><td>« Impossible de terminer : des sous-tâches ne sont pas terminées. »</td><td>Terminez d'abord toutes les sous-tâches.</td></tr>
+<tr><td>« Impossible de terminer : bloquée par une tâche non terminée. »</td><td>Terminez d'abord la tâche bloquante (visible dans « Demandes liées » dans Redmine).</td></tr>
+<tr><td>« La modification n'a pas pu être effectuée. »</td><td>Redmine n'a pas accepté la modification. Cela arrive quand un champ doit être rempli pour terminer la tâche. Dans ce cas, terminez-la dans Redmine.</td></tr>
+<tr><td>« Impossible de confirmer l'envoi. Veuillez recharger. »</td><td>L'application n'a pas pu confirmer que la mise à jour est arrivée dans Redmine. Recharger permet de le vérifier à nouveau.<ul><li>Si Redmine est accessible mais que l'application ne peut toujours pas confirmer la mise à jour, elle cesse la vérification pour que vous puissiez continuer.</li><li>Tant que Redmine est inaccessible (sans réseau, par exemple), vous ne pouvez ni terminer ni commenter d'autres tâches avant la confirmation. Toutefois, si deux rechargements de suite ne permettent pas de confirmer, l'application cesse la vérification (le compte continue même si vous rouvrez l'application).</li><li>Un commentaire dont la vérification a cessé reste en brouillon. Il est peut-être déjà arrivé : le renvoyer peut créer un doublon.</li></ul></td></tr>
+<tr><td>« Erreur de l'application. Veuillez recharger. »</td><td>Si recharger ne règle rien, votre Redmine n'est peut-être pas pris en charge (antérieur à 6.0, par exemple).</td></tr>
+</table></div>
+<h2 id="faq">Autres questions fréquentes</h2>
+<dl>
+<dt>La tâche terminée a pris un statut inattendu (par exemple « Rejeté »)</dt><dd>l'application utilise le premier statut fermé autorisé pour cette tâche, dans l'ordre des statuts de Redmine. Le statut utilisé est indiqué dans la notification. Touchez « Annuler » sur la ligne terminée (ou dans la notification) pour revenir en arrière. Ce n'est plus possible après le rechargement de la liste, ou si Redmine n'autorise pas le retour au statut précédent. Dans ce cas, rétablissez le statut dans Redmine. Si l'administrateur de Redmine change l'ordre des statuts (en plaçant « Fermé » avant « Rejeté »), un autre statut est choisi.</dd>
+<dt>Redmine m'a demandé mon mot de passe pour afficher la clé d'API (Redmine 7.0)</dt><dd>Redmine redemande le mot de passe lorsque la connexion date d'un certain temps. Saisissez-le pour afficher votre clé d'API.</dd>
+<dt>Des tâches n'apparaissent pas</dt><dd>la liste ne montre que les tâches qui vous sont assignées, non fermées et dont la date de début n'est pas dans le futur. Les tâches des projets fermés ne sont pas affichées. La liste n'est pas filtrée par échéance.</dd>
+<dt>Avant de céder ou de vous séparer de votre appareil</dt><dd>« Supprimer la connexion » dans « Réglages » efface de l'appareil votre clé d'API, vos brouillons de commentaires et les traces des envois non confirmés.</dd>
+</dl>
+<h2 id="unsupported">Non pris en charge</h2>
+<p>Les environnements suivants peuvent fonctionner, mais n'ont pas été testés.</p>
+<ul><li>Redmine antérieur à 6.0</li><li>Redmine avec des plugins</li><li>Services Redmine hébergés (My Redmine, Planio, etc.)</li><li>Certificats privés émis au sein de votre organisation</li><li>Authentification placée devant Redmine (Basic, par exemple)</li><li>SSO</li></ul>
+<h2 id="contact">Contact</h2>
+<p>Envoyez vos signalements de bugs et vos avis par e-mail.</p>
+<p><a class="button" href="mailto:potei_eisu2@yahoo.co.jp?subject=BeatMine%20for%20Redmine">potei_eisu2@yahoo.co.jp</a></p>
+<p>Si vous avez un compte GitHub, vous pouvez aussi utiliser les <a href="https://github.com/kyamada23/beatmine-site/issues/new">GitHub Issues</a>. Les Issues sont publiques.</p>
+<p>N'y indiquez pas votre clé d'API, vos mots de passe, l'URL de votre Redmine, le contenu des tâches ni rien de confidentiel. Joindre les informations suivantes nous aide à répondre plus vite.</p>
+<ul><li>La version de l'application (Réglages &gt; Général &gt; Stockage iPhone &gt; BeatMine. Vous pouvez l'omettre si vous ne la trouvez pas.)</li><li>Le modèle de l'iPhone et la version d'iOS</li><li>La version de Redmine (si vous la connaissez)</li><li>Le message affiché (par exemple « Erreur réseau ») et ce que vous faisiez</li></ul>
+<p class="sub">Mis à jour le 3 octobre 2026</p>
+</main></body></html>

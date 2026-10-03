@@ -1,0 +1,59 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BeatMine for Redmine Support</title>
+<meta name="description" content="So nutzen Sie BeatMine for Redmine, die iPhone-App zum Erledigen und Kommentieren Ihrer Redmine-Aufgaben mit wenigen Handgriffen – und was Sie tun können, wenn etwas nicht klappt.">
+<link rel="canonical" href="https://kyamada23.github.io/beatmine-site/de/">
+<link rel="alternate" hreflang="ja" href="https://kyamada23.github.io/beatmine-site/"><link rel="alternate" hreflang="en" href="https://kyamada23.github.io/beatmine-site/en/"><link rel="alternate" hreflang="fr" href="https://kyamada23.github.io/beatmine-site/fr/"><link rel="alternate" hreflang="de" href="https://kyamada23.github.io/beatmine-site/de/"><link rel="alternate" hreflang="ko" href="https://kyamada23.github.io/beatmine-site/ko/"><link rel="alternate" hreflang="zh-Hant" href="https://kyamada23.github.io/beatmine-site/zh-hant/"><link rel="alternate" hreflang="x-default" href="https://kyamada23.github.io/beatmine-site/en/">
+<meta property="og:type" content="website"><meta property="og:title" content="BeatMine for Redmine"><meta property="og:description" content="Eine iPhone-App, mit der Sie Ihre Redmine-Aufgaben mit wenigen Handgriffen melden."><meta property="og:url" content="https://kyamada23.github.io/beatmine-site/de/"><meta property="og:locale" content="de_DE"><meta property="og:image" content="https://kyamada23.github.io/beatmine-site/assets/ogp.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css"></head><body><main>
+<header><img src="../icon.png" alt="" width="48" height="48"><div><h1>BeatMine for Redmine</h1><div class="sub">Support</div></div></header>
+<nav><a href="./" aria-current="page">Support</a><a href="privacy.html">Datenschutzerklärung</a></nav>
+<nav class="langs" aria-label="Language"><a href="../" hreflang="ja" lang="ja">日本語</a><a href="../en/" hreflang="en" lang="en">English</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><span aria-current="true" lang="de">Deutsch</span><a href="../ko/" hreflang="ko" lang="ko">한국어</a><a href="../zh-hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
+<p>Eine App, mit der Sie die Ihnen zugewiesenen Redmine-Aufgaben mit wenigen Handgriffen vom iPhone aus melden. BeatMine ist keine offizielle Redmine-App und steht in keiner Verbindung zu den Redmine-Entwicklern.</p>
+<ul class="points"><li>Es werden nur Ihre eigenen, noch offenen Aufgaben angezeigt. Überfällige Aufgaben erscheinen rot.</li><li>Wischen Sie eine Aufgabe nach rechts, um sie zu erledigen. Sie können das sofort rückgängig machen.</li><li>Tippen Sie auf eine Aufgabe, um einen Kommentar zu senden. Er wird in der Redmine-Historie gespeichert.</li></ul>
+<div class="shots"><figure><img src="../assets/screen-01-de.webp" width="600" height="1222" alt="Die Liste der heutigen Aufgaben. Überfällige Aufgaben werden rot angezeigt."><figcaption>Heutige Aufgaben</figcaption></figure><figure><img src="../assets/screen-02-de.webp" width="600" height="1222" alt="Der Bildschirm, der sich beim Antippen einer Aufgabe öffnet, mit den Schaltflächen „Erledigen“ und „Kommentar“."><figcaption>Antippen zum Erledigen oder Kommentieren</figcaption></figure></div>
+<nav class="toc" aria-label="Auf dieser Seite"><a href="#need">Was Sie brauchen</a><a href="#start">Erste Schritte</a><a href="#trouble">Wenn etwas nicht klappt</a><a href="#faq">Weitere häufige Fragen</a><a href="#unsupported">Nicht unterstützt</a><a href="#contact">Kontakt</a></nav>
+<h2 id="need">Was Sie brauchen</h2>
+<ul><li>Redmine 6.0, 6.1 oder 7.0.</li><li>HTTPS-Zugriff auf dieses Redmine von diesem Gerät aus.</li><li>Eine in Redmine aktivierte REST-API (eine Einstellung Ihres Redmine-Administrators).</li><li>Ihr API-Schlüssel. Falls Sie ihn nicht zur Hand haben, nutzen Sie „API-Schlüssel in Redmine abrufen“ auf dem Verbindungsbildschirm.</li></ul>
+<p>Nicht unterstützte Umgebungen finden Sie unter „Nicht unterstützt“.</p>
+<h2 id="start">Erste Schritte</h2>
+<ol><li>Öffnen Sie die App und geben Sie die URL Ihres Redmine ein.</li><li>Tippen Sie auf „API-Schlüssel in Redmine abrufen“. Redmine öffnet sich im Browser. Melden Sie sich an und kopieren Sie den angezeigten API-Schlüssel. Kehren Sie zu BeatMine zurück und tippen Sie auf „Einfügen und verbinden“. Haben Sie den API-Schlüssel bereits, können Sie ihn eingeben und auf „Verbinden“ tippen.</li><li>Ihre Aufgabenliste erscheint.</li></ol>
+<h2 id="trouble">Wenn etwas nicht klappt</h2>
+<p>Suchen Sie die Meldung, die auf dem Bildschirm erscheint.</p>
+<h3>Beim Verbinden</h3>
+<p>Erscheint „Keine Verbindung zu Redmine möglich.“, prüfen Sie die Ursache. Eine falsche URL oder ein falscher API-Schlüssel wird unter dem jeweiligen Feld angezeigt. Andere Ursachen sehen Sie über „Details“.</p>
+<div class="table"><table><tr><th>Ursache</th><th>Was Sie tun können</th></tr>
+<tr><td>„Die Redmine-URL ist falsch.“</td><td>Öffnen Sie die URL im Browser des Geräts. Öffnet sie sich nicht, ist die URL vielleicht falsch geschrieben, oder Sie verbinden sich von außen mit einem nur intern erreichbaren Redmine.</td></tr>
+<tr><td>„Der API-Schlüssel ist falsch.“</td><td>Geben Sie den API-Schlüssel erneut ein. Tippen Sie auf „API-Schlüssel in Redmine abrufen“ und kopieren Sie den angezeigten Schlüssel. Ist Redmine eine weitere Anmeldung (z. B. Basic-Authentifizierung) vorgeschaltet, kann diese App nicht verwendet werden.</td></tr>
+<tr><td>„Die Redmine-API ist deaktiviert. Bitten Sie Ihren Redmine-Administrator, sie zu aktivieren.“</td><td>Lassen Sie die REST-API in Redmine aktivieren.</td></tr>
+<tr><td>„Das Zertifikat von Redmine kann nicht überprüft werden.“</td><td>Dieses Gerät kann das Zertifikat Ihres Redmine nicht prüfen. Redmine-Server mit einem privaten Zertifikat (nur innerhalb Ihrer Organisation ausgestellt) werden nicht unterstützt. Die Meldung erscheint auch, wenn die Anmeldung im WLAN noch nicht abgeschlossen ist oder Datum und Uhrzeit des Geräts nicht stimmen.</td></tr>
+</table></div>
+<h3>Beim Laden, Erledigen oder Kommentieren</h3>
+<div class="table"><table><tr><th>Meldung</th><th>Was Sie tun können</th></tr>
+<tr><td>„Netzwerkfehler“</td><td>Versuchen Sie es dort erneut, wo Sie Empfang haben. Die Meldung erscheint auch, wenn Redmine vorübergehend nicht antwortet.</td></tr>
+<tr><td>„Von einem anderen Benutzer aktualisiert. Bitte neu laden.“</td><td>Jemand anderes hat die Aufgabe geändert. Laden Sie neu, prüfen Sie den aktuellen Stand und versuchen Sie es dann erneut.</td></tr>
+<tr><td>„Sie haben keine Berechtigung zum Erledigen.“ (entsprechende Meldung beim Kommentieren und Laden)</td><td>Das ist in Ihrem Redmine nicht erlaubt. Wenden Sie sich an Ihren Redmine-Administrator.</td></tr>
+<tr><td>„Kann nicht erledigt werden, da es offene Unteraufgaben gibt.“</td><td>Erledigen Sie zuerst alle Unteraufgaben.</td></tr>
+<tr><td>„Kann nicht erledigt werden, da eine offene Aufgabe sie blockiert.“</td><td>Erledigen Sie zuerst die blockierende Aufgabe (in Redmine unter „Zugehörige Tickets“).</td></tr>
+<tr><td>„Die Änderung war nicht möglich.“</td><td>Redmine hat die Änderung nicht angenommen. Das passiert, wenn zum Erledigen ein Feld ausgefüllt werden muss. Erledigen Sie die Aufgabe dann in Redmine.</td></tr>
+<tr><td>„Senden konnte nicht bestätigt werden. Bitte neu laden.“</td><td>Die App konnte nicht bestätigen, ob Ihre Änderung in Redmine angekommen ist. Durch Neuladen wird das erneut geprüft.<ul><li>Ist Redmine erreichbar, kann die App die Änderung aber weiterhin nicht bestätigen, beendet sie die Prüfung, damit Sie weitermachen können.</li><li>Solange Redmine nicht erreichbar ist (z. B. ohne Empfang), können Sie bis zur Bestätigung keine weiteren Aufgaben erledigen oder kommentieren. Lässt sich die Änderung jedoch bei zwei aufeinanderfolgenden Neuladevorgängen nicht bestätigen, beendet die App die Prüfung (gezählt wird auch über einen Neustart der App hinweg).</li><li>Ein Kommentar, dessen Prüfung beendet wurde, bleibt als Entwurf erhalten. Er ist möglicherweise schon angekommen; erneutes Senden kann ihn doppelt anlegen.</li></ul></td></tr>
+<tr><td>„Fehler in der App. Bitte neu laden.“</td><td>Hilft Neuladen nicht, wird Ihr Redmine möglicherweise nicht unterstützt (z. B. älter als 6.0).</td></tr>
+</table></div>
+<h2 id="faq">Weitere häufige Fragen</h2>
+<dl>
+<dt>Beim Erledigen wurde ein unerwarteter Status gesetzt (z. B. „Abgewiesen“)</dt><dd>Die App verwendet den ersten geschlossenen Status, den Sie für diese Aufgabe setzen dürfen, in der Statusreihenfolge von Redmine. Der verwendete Status steht in der Benachrichtigung. Mit „Zurück“ in der erledigten Zeile (oder „Rückgängig“ in der Benachrichtigung) machen Sie das rückgängig. Nach dem Neuladen der Liste oder wenn Redmine das Zurücksetzen des Status nicht erlaubt, ist das nicht mehr möglich. Setzen Sie den Status dann in Redmine zurück. Ändert Ihr Redmine-Administrator die Statusreihenfolge („Erledigt“ vor „Abgewiesen“), wird ein anderer Status gewählt.</dd>
+<dt>Beim Abrufen des API-Schlüssels wurde mein Passwort abgefragt (Redmine 7.0)</dt><dd>Redmine fragt einige Zeit nach der Anmeldung erneut nach dem Passwort. Geben Sie es ein, um den API-Schlüssel zu sehen.</dd>
+<dt>Manche Aufgaben fehlen in der Liste</dt><dd>Angezeigt werden nur Aufgaben, die Ihnen zugewiesen und nicht geschlossen sind und deren Startdatum nicht in der Zukunft liegt. Aufgaben abgeschlossener Projekte werden nicht angezeigt. Nach Fälligkeit wird nicht gefiltert.</dd>
+<dt>Bevor Sie Ihr Gerät weitergeben</dt><dd>„Verbindung löschen“ unter „Einstellungen“ löscht API-Schlüssel, Kommentarentwürfe und Aufzeichnungen unbestätigter Vorgänge vom Gerät.</dd>
+</dl>
+<h2 id="unsupported">Nicht unterstützt</h2>
+<p>Folgendes kann funktionieren, wurde aber nicht getestet.</p>
+<ul><li>Redmine älter als 6.0</li><li>Redmine mit Plugins</li><li>Gehostete Redmine-Dienste (My Redmine, Planio u. a.)</li><li>Private, nur innerhalb Ihrer Organisation ausgestellte Zertifikate</li><li>Redmine vorgeschaltete Authentifizierung (z. B. Basic-Authentifizierung)</li><li>SSO</li></ul>
+<h2 id="contact">Kontakt</h2>
+<p>Fehlerberichte und Feedback senden Sie bitte per E-Mail.</p>
+<p><a class="button" href="mailto:potei_eisu2@yahoo.co.jp?subject=BeatMine%20for%20Redmine">potei_eisu2@yahoo.co.jp</a></p>
+<p>Mit einem GitHub-Konto können Sie auch <a href="https://github.com/kyamada23/beatmine-site/issues/new">GitHub Issues</a> nutzen. Issues sind öffentlich.</p>
+<p>Geben Sie keine API-Schlüssel, Passwörter, Redmine-URLs, Aufgabeninhalte oder andere vertrauliche Daten an. Mit den folgenden Angaben können wir schneller antworten.</p>
+<ul><li>App-Version (Einstellungen &gt; Allgemein &gt; iPhone-Speicher &gt; BeatMine. Falls nicht auffindbar, lassen Sie sie weg.)</li><li>iPhone-Modell und iOS-Version</li><li>Redmine-Version (falls bekannt)</li><li>Die angezeigte Meldung (z. B. „Netzwerkfehler“) und was Sie gerade getan haben</li></ul>
+<p class="sub">Aktualisiert am 3. Oktober 2026</p>
+</main></body></html>
