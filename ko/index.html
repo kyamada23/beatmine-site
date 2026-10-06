@@ -11,8 +11,8 @@
 <nav class="langs" aria-label="Language"><a href="../" hreflang="ja" lang="ja">日本語</a><a href="../en/" hreflang="en" lang="en">English</a><a href="../fr/" hreflang="fr" lang="fr">Français</a><a href="../de/" hreflang="de" lang="de">Deutsch</a><span aria-current="true" lang="ko">한국어</span><a href="../zh-hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></nav>
 <p>내게 배정된 Redmine 작업을 iPhone에서 간단한 조작으로 보고하는 앱입니다. BeatMine은 Redmine 공식 앱이 아니며, Redmine 개발자와 관련이 없습니다.</p>
 <p><a class="button" href="https://apps.apple.com/app/id6815222410">App Store에서 다운로드하기</a></p>
-<ul class="points"><li>내가 담당하는, 아직 끝나지 않은 작업만 표시됩니다. 기한이 지난 작업은 빨간색으로 표시됩니다.</li><li>작업을 오른쪽으로 밀면 완료됩니다. 바로 되돌릴 수 있습니다.</li><li>작업을 탭하면 댓글도 보낼 수 있습니다. 내용은 Redmine 이력에 남습니다.</li></ul>
-<div class="shots"><figure><img src="../assets/screen-01-ko.webp" width="600" height="1222" alt="오늘의 작업 목록. 기한이 지난 작업은 빨간색으로 표시됩니다."><figcaption>오늘의 작업</figcaption></figure><figure><img src="../assets/screen-02-ko.webp" width="600" height="1222" alt="작업을 탭하면 나타나는 화면. ‘완료’와 ‘댓글’ 버튼이 있습니다."><figcaption>탭하여 완료하거나 댓글 남기기</figcaption></figure></div>
+<ul class="points"><li>나 또는 내가 속한 그룹이 담당하는, 아직 끝나지 않은 작업만 표시됩니다. 그룹 담당 작업에는 그룹 이름이 표시됩니다. 기한이 지난 작업은 빨간색으로 표시됩니다.</li><li>작업을 오른쪽으로 밀면 완료됩니다. 바로 되돌릴 수 있습니다.</li><li>작업을 탭하면 작업의 설명과 첨부 파일을 읽을 수 있습니다. 이미지는 앱에서 열어 확대할 수 있습니다. 설명이나 첨부가 있는 작업에는 줄에 표시가 나옵니다.</li><li>작업을 탭하면 댓글도 보낼 수 있습니다. 내용은 Redmine 이력에 남습니다.</li></ul>
+<div class="shots"><figure><img src="../assets/screen-01-ko.webp" width="600" height="1222" alt="오늘의 작업 목록. 기한이 지난 작업은 빨간색으로 표시됩니다."><figcaption>오늘의 작업</figcaption></figure><figure><img src="../assets/screen-02-ko.webp" width="600" height="1222" alt="작업을 탭하면 나타나는 화면. 설명과 첨부 파일, ‘완료’와 ‘댓글’ 버튼이 있습니다."><figcaption>탭하여 내용 확인·완료·댓글</figcaption></figure></div>
 <nav class="toc" aria-label="이 페이지의 내용"><a href="#need">필요한 것</a><a href="#start">시작하기</a><a href="#trouble">문제가 생겼을 때</a><a href="#faq">그 밖의 자주 묻는 질문</a><a href="#unsupported">지원하지 않는 것</a><a href="#contact">문의</a></nav>
 <h2 id="need">필요한 것</h2>
 <ul><li>Redmine 6.0·6.1·7.0 중 하나.</li><li>이 기기에서 해당 Redmine을 HTTPS로 열 수 있을 것.</li><li>Redmine에서 REST API가 활성화되어 있을 것(Redmine 관리자의 설정).</li><li>내 API 키. 없으면 연결 화면의 ‘Redmine에서 API 키 받기’에서 받을 수 있습니다.</li></ul>
@@ -40,11 +40,19 @@
 <tr><td>‘전송 완료를 확인할 수 없습니다. 새로고침하세요.’</td><td>보낸 내용이 Redmine에 반영되었는지 확인하지 못한 상태입니다. 새로고침하면 다시 확인합니다.<ul><li>Redmine에 접속할 수 있는데도 반영되었는지 확인할 수 없으면, 그 전송의 확인을 그만두고 다음 보고를 계속할 수 있습니다.</li><li>신호가 없는 등 Redmine에 접속할 수 없는 동안에는, 확인될 때까지 다른 작업을 완료하거나 댓글을 달 수 없습니다. 다만 새로고침으로 두 번 연속 확인하지 못하면, 그 전송의 확인을 그만둡니다(앱을 다시 열어도 횟수는 이어집니다).</li><li>확인을 그만둔 댓글은 임시 저장본으로 남습니다. 실제로는 이미 전송되었을 수 있어, 다시 보내면 중복될 수 있습니다.</li></ul></td></tr>
 <tr><td>‘앱 오류입니다. 새로고침하세요.’</td><td>새로고침해도 해결되지 않으면 지원하지 않는 Redmine(6.0 이전 등)일 수 있습니다.</td></tr>
 </table></div>
+<h3>설명·첨부 파일을 볼 때</h3>
+<div class="table"><table><tr><th>화면에 표시되는 문구</th><th>할 수 있는 일</th></tr>
+<tr><td>‘앱에서 열 수 없습니다’</td><td>앱에서 열 수 있는 것은 20MB까지의 이미지(JPEG·PNG·GIF·WebP·HEIC)뿐입니다. PDF 등 다른 파일은 Redmine 화면에서 여세요.</td></tr>
+<tr><td>‘링크를 열 수 없습니다.’</td><td>설명 속 링크를 기기의 브라우저에서 열지 못했습니다. 설명의 글은 길게 눌러 선택하고 복사할 수 있으니, 브라우저에 붙여 넣어 여세요.</td></tr>
+</table></div>
+<p>이미지를 열 때의 ‘네트워크 오류’ 등은 위의 ‘불러오기·완료·댓글을 할 때’와 같습니다. ‘다시 시도’로 다시 불러올 수 있습니다.</p>
 <h2 id="faq">그 밖의 자주 묻는 질문</h2>
 <dl>
 <dt>완료했더니 의도하지 않은 상태(‘거절’ 등)가 되었다</dt><dd>그 작업에서 변경할 수 있는 종료 상태 중, Redmine의 상태 순서에서 첫 번째 것을 사용합니다. 어떤 상태로 했는지는 완료 알림에 표시됩니다. 완료한 줄의 ‘되돌리기’(또는 완료 알림의 ‘취소’)로 되돌릴 수 있습니다. 다만 목록을 새로고침한 뒤나, Redmine에서 원래 상태로 되돌리는 변경이 허용되지 않을 때는 되돌릴 수 없습니다. 그때는 Redmine 화면에서 되돌리세요. Redmine 관리자가 상태 순서를 바꾸면(‘완료’를 ‘거절’보다 위로) 선택되는 상태가 바뀝니다.</dd>
 <dt>API 키를 받을 때 비밀번호 입력을 요구받았다(Redmine 7.0)</dt><dd>로그인 후 시간이 지나면 Redmine이 비밀번호 재입력을 요청합니다. 입력하면 API 키가 표시됩니다.</dd>
-<dt>목록에 나오지 않는 작업이 있다</dt><dd>나에게 할당되어 있고, 아직 완료되지 않았으며, 시작일이 미래가 아닌 작업만 표시합니다. 종료된 프로젝트의 작업도 표시하지 않습니다. 기한으로는 거르지 않습니다.</dd>
+<dt>목록에 나오지 않는 작업이 있다</dt><dd>나 또는 내가 속한 그룹에 할당되어 있고, 아직 완료되지 않았으며, 시작일이 미래가 아닌 작업만 표시합니다. 종료된 프로젝트의 작업도 표시하지 않습니다. 기한으로는 거르지 않습니다.</dd>
+<dt>그룹의 작업은 누가 하나요</dt><dd>앱에서는 정하지 않습니다. 그룹 안에서 이야기하거나, Redmine에서 담당자를 개인으로 바꾸세요. 그룹의 작업을 완료하면 같은 그룹의 다른 사람 목록에서도 사라집니다.</dd>
+<dt>설명에 ‘h2.’, ‘*’ 같은 기호가 나온다</dt><dd>앱은 설명을 Markdown으로 보고, 제목·목록·굵은 글씨·링크·코드만 정리합니다. Textile로 쓰는 조직의 Redmine이나 표·삽입된 이미지는 기호 그대로 나옵니다.</dd>
 <dt>기기를 다른 사람에게 넘기거나 처분할 때</dt><dd>‘설정’의 ‘연결 삭제’로 API 키·댓글 임시 저장본·확인되지 않은 전송 기록이 기기에서 삭제됩니다.</dd>
 </dl>
 <h2 id="unsupported">지원하지 않는 것</h2>
