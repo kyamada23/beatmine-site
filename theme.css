@@ -480,3 +480,51 @@ footer{
 .legacy-links,.footer-languages{display:flex;flex-wrap:wrap;gap:10px 24px;padding:20px 0;font-size:13px}.legacy-links a,.footer-languages a{display:inline-flex;align-items:center;min-height:44px}.legacy-links a:target{outline:2px solid var(--red);outline-offset:4px}.help-article .table{overflow-x:auto}.help-article table{width:100%;border-collapse:collapse}.help-article th,.help-article td{text-align:left;vertical-align:top;padding:14px;border-bottom:1px solid var(--line);font-size:14px}.help-article th{background:var(--cream)}.card .mini{margin-bottom:0}.example-label{margin-top:12px}
 
 .comment-screen{height:270px}.comment-screen img{height:100%;object-fit:cover;object-position:bottom}
+.help-heading h1{overflow-wrap:anywhere;hyphens:auto}
+html:lang(ko) .hero h1,html:lang(zh-Hant) .hero h1{letter-spacing:-1px}
+html:lang(ko) body{word-break:keep-all;overflow-wrap:anywhere}
+@media(max-width:800px){html:lang(ko) .hero h1{font-size:clamp(30px,8.2vw,42px)}}
+
+.top>.nav{margin-left:auto}
+
+
+
+/* Header controls share a 44px hit area and a 20px text/icon baseline. */
+.top{gap:24px;padding:24px 0;min-height:0}
+.top .brand{gap:10px;letter-spacing:0;line-height:1.2}
+.top .brand>span{display:grid;gap:4px}
+.top .brand small{line-height:12px;letter-spacing:.8px}
+.top .brand img{display:block;flex:none}
+.top>.nav{gap:24px;align-items:center}
+.top>.nav>a{line-height:20px;padding:12px 0}
+.language-dropdown{position:relative;padding:0;border:0;z-index:20}
+.language-dropdown .language-trigger{display:grid;grid-template-columns:18px auto 12px;align-items:center;column-gap:8px;min-height:44px;margin:0;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;line-height:20px;cursor:pointer;list-style:none;user-select:none;background:transparent}
+.language-dropdown .language-trigger::-webkit-details-marker{display:none}
+.language-dropdown .language-trigger>span{white-space:nowrap}
+.language-dropdown svg{display:block;margin:0;flex:none}
+.language-dropdown .language-trigger:hover,.language-dropdown .language-trigger[aria-expanded="true"]{background:var(--cream);border-color:#bfb5a9}
+.language-dropdown .language-trigger>svg{color:var(--muted)}
+.language-trigger[aria-expanded="true"] .language-chevron{transform:rotate(180deg)}
+.language-panel{position:absolute;right:0;top:calc(100% + 8px);width:200px;padding:8px;background:#fffdf9;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 36px #29272216,0 2px 6px #29272208}
+.language-panel a{display:grid;grid-template-columns:1fr 16px;align-items:center;column-gap:12px;min-height:44px;margin:0;padding:12px;border-radius:6px;font-size:14px;line-height:20px;text-decoration:none}
+.language-panel a::after{content:"";width:10px;height:6px;justify-self:center}
+.language-panel a:hover,.language-panel a:focus-visible{background:var(--cream)}
+.language-panel a[aria-current=page]{color:var(--red);background:#a3212709;font-weight:650}
+.language-panel a[aria-current=page]::after{border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(-45deg)}
+.language-dropdown .language-trigger:focus-visible,.language-panel a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.actions{gap:16px 24px}
+.cta,.secondary{line-height:20px;gap:8px}
+.cta>span,.secondary>span{display:inline-flex;align-items:center;justify-content:center;line-height:20px;flex:none}
+.help-cards a{display:grid;grid-template-columns:24px 1fr 16px;align-items:center;gap:12px}
+.help-cards span:last-child{margin:0;text-align:center}
+@media(max-width:600px){
+  .top{display:grid;grid-template-columns:1fr;gap:16px;padding:20px 0 16px}
+  .top>.nav{width:100%;margin:0;justify-content:space-between;gap:16px;flex-wrap:nowrap}
+  .top .brand{font-size:19px}
+  .hero{padding-top:32px}
+  .language-panel{width:200px}
+}
+
+.language-trigger{font-family:inherit;color:inherit}.language-panel[hidden],.language-trigger[hidden]{display:none}
+
+:lang(ja) .eyebrow, :lang(ko) .eyebrow, :lang(zh-Hant) .eyebrow{text-transform:none}
